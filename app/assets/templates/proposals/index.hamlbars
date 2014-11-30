@@ -15,7 +15,7 @@
         %td
           = hb 'title'
         %td
-          %a.btn.btn-xs
+          %a.btn.btn-xs{ href: "#proposals/#{ hb 'id' }"}
             %span.glyphicon.glyphicon-info-sign
           %a.btn.btn-xs
             %span.glyphicon.glyphicon-pencil
