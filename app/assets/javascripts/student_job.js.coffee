@@ -4,8 +4,8 @@ window.StudentJob =
   Views: {}
   Routers: {}
   initialize: ->
+    window.routerPages = new StudentJob.Routers.Pages()
     window.routerProposals = new StudentJob.Routers.Proposals()
-    console.log 'Hello from Backbone!'
     Backbone.history.start()
 
 $(document).ready ->
