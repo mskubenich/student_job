@@ -16,6 +16,7 @@
 //= require underscore
 //= require backbone
 //= require student_job
+//= require handlebars.runtime
 //= require_tree ../templates
 //= require_tree ./models
 //= require_tree ./collections

@@ -3,7 +3,11 @@ window.StudentJob =
   Collections: {}
   Views: {}
   Routers: {}
-  initialize: -> alert 'Hello from Backbone!'
+  initialize: ->
+    window.routerProposals = new StudentJob.Routers.Proposals()
+    console.log 'Hello from Backbone!'
+    Backbone.history.start()
 
 $(document).ready ->
   StudentJob.initialize()
+

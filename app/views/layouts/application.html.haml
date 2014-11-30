@@ -31,9 +31,7 @@
         .navbar-collapse.collapse.navbar-responsive-collapse
           %ul.nav.navbar-nav
             %li.active
-              = link_to "Student", root_path
-            %li
-              = link_to "Organization", root_path
+              = link_to "Proposals", '#proposals'
           %ul.nav.navbar-nav.navbar-right
             %li
               = link_to '#' do
@@ -53,7 +51,7 @@
         .col-md-12
           = render_breadcrumbs
           = bootstrap_flash
-          = yield
+          #container
       %br
       %br
       %br
