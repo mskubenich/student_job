@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :proposals
+  resources :proposals, only: [:index, :show]
 
   root to: 'application#index'
 end

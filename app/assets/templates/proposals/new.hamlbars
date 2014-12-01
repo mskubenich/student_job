@@ -1,0 +1,17 @@
+%form.form-horizontal{:role => "form"}
+  .form-group
+    %label.col-sm-2.control-label
+    .col-sm-10
+      %h2
+        New Proposal
+  .form-group
+    %label.col-sm-2.control-label Title
+    .col-sm-10
+      %input.form-control{:placeholder => "Title ..." }
+  .form-group
+    %label.col-sm-2.control-label{:for => "inputPassword3"} Description
+    .col-sm-10
+      %textarea.form-control{:placeholder => "Description ..." }
+  .form-group
+    .col-sm-offset-2.col-sm-10
+      %button.btn.btn-default{:type => "submit"} Save

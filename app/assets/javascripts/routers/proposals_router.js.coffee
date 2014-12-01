@@ -2,6 +2,7 @@ class StudentJob.Routers.Proposals extends Backbone.Router
 
   routes:
     'proposals': 'index'
+    'proposals/new': 'new'
     'proposals/:id': 'show'
 
   index: ->
@@ -19,3 +20,7 @@ class StudentJob.Routers.Proposals extends Backbone.Router
       proposal: @proposal
 
     @proposalsShowView.render()
+
+  new: ->
+    @proposalsNewView = new StudentJob.Views.ProposalsNew()
+    @proposalsNewView.render()

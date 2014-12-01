@@ -5,14 +5,7 @@ class ProposalsController < ApplicationController
     @proposals = Proposal.all
   end
 
-  # GET /proposals/1
-  # GET /proposals/1.json
   def show
-  end
-
-  # GET /proposals/new
-  def new
-    @proposal = Proposal.new
   end
 
   # GET /proposals/1/edit
