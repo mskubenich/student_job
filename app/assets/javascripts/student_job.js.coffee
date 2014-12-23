@@ -6,6 +6,7 @@ window.StudentJob =
   initialize: ->
     window.routerPages = new StudentJob.Routers.Pages()
     window.routerProposals = new StudentJob.Routers.Proposals()
+    window.routerArticles = new StudentJob.Routers.Articles()
     Backbone.history.start()
 
 $(document).ready ->

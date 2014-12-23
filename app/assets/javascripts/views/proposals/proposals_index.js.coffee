@@ -11,4 +11,5 @@ class StudentJob.Views.ProposalsIndex extends Backbone.View
   render: ->
     @proposals.fetch
       async: false
+    console.log JSON.stringify(@proposals)
     $(@$el).html @template( proposals: @proposals.toJSON() )
