@@ -1,0 +1,13 @@
+.container
+  .row
+    .col-md-6.col-md-offset-3.text-center
+      %h1
+        Sign in
+      %form{ action: '/sessions', method: 'post'}
+        .form-horizontal
+          %input{ type: 'text', name: 'session[email]', placeholder: 'Email', class: 'form-control'}
+          %br
+          %input{ type: 'password', name: 'session[password]', placeholder: 'Password', class: 'form-control'}
+        %br
+        .text-center
+          %input{ type: 'submit', class: "btn btn-primary btn-lg"}

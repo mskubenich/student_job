@@ -4,5 +4,6 @@ class StudentJob.Routers.Pages extends Backbone.Router
     "": "index"
 
   index: ->
+    console.log 'here'
     @pagesIndexView = new StudentJob.Views.PagesIndex
     @pagesIndexView.render()

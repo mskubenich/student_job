@@ -1,10 +1,10 @@
 //= require bootstrap_overrides
-//= require skel
-//= require style
-//= require style-desktop
 //= require_self
 //= require_tree .
 
+body{
+  margin-top: 80px;
+}
 .pagination{
     margin: 0;
 }
