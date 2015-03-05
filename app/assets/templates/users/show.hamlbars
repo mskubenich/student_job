@@ -1,0 +1,22 @@
+%table.table.table-striped
+  %tbody
+    %tr
+      %td
+        Id
+      %td
+        = hb 'id'
+    %tr
+      %td
+        Title
+      %td
+        = hb 'email'
+    %tr
+      %td
+        Created At
+      %td
+        = hb 'created_at'
+    %tr
+      %td
+        Updated At
+      %td
+        = hb 'updated_at'

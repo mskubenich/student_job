@@ -8,6 +8,7 @@ window.StudentJob =
     window.routerProposals = new StudentJob.Routers.Proposals()
     window.routerArticles = new StudentJob.Routers.Articles()
     window.routerSessions = new StudentJob.Routers.Sessions()
+    window.routerUsers = new StudentJob.Routers.Users()
     Backbone.history.start()
 
 $(document).ready ->

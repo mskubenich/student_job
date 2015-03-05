@@ -31,4 +31,14 @@ module SessionsHelper
     cookies.delete(:session_token)
     @current_user = nil
   end
+
+  def sign_up(user)
+    @current_session = user.sessions.create
+    @current_session.save
+
+    cookies.permanent[:session_token] = @current_session.token
+    current_user = user
+  end
+
+
 end
