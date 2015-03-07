@@ -1,0 +1,29 @@
+%a.btn.btn-info{ href: '#categorys/new' }
+  Add new
+
+%table.table.table-striped
+  %thead
+    %tr
+      %th
+        Id
+      %th
+        Title
+      %th
+        Actions
+  %tbody
+    = hb 'each categorys' do
+      %tr
+        %td
+          = hb 'id'
+        %td
+          = hb 'title'
+        %td
+          %a.btn.btn-xs{ href: "#categorys/#{ hb 'id' }"}
+            %span.glyphicon.glyphicon-info-sign
+          %a.btn.btn-xs
+            %span.glyphicon.glyphicon-pencil
+          %a.btn.btn-xs
+            %span.glyphicon.glyphicon-remove
+
+%a.btn.btn-info{ href: '#categorys/new' }
+  Add new

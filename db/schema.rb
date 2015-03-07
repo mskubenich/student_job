@@ -27,6 +27,21 @@ ActiveRecord::Schema.define(version: 20150304115710) do
     t.datetime "updated_at"
   end
 
+  create_table "vacantions", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "categorys", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "parentId"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "roles", force: true do |t|
     t.string "name"
   end

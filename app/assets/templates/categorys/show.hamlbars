@@ -1,0 +1,32 @@
+%table.table.table-striped
+  %tbody
+    %tr
+      %td
+        Id
+      %td
+        = hb 'id'
+    %tr
+      %td
+        Title
+      %td
+        = hb 'title'
+    %tr
+      %td
+        Description
+      %td
+        = hb 'description'
+    %tr
+      %td
+        ParentId
+      %td
+        = hb 'parentId'
+    %tr
+      %td
+        Created At
+      %td
+        = hb 'created_at'
+    %tr
+      %td
+        Updated At
+      %td
+        = hb 'updated_at'
