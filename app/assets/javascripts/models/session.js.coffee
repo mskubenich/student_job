@@ -24,3 +24,4 @@ class StudentJob.Models.Sessions extends Backbone.Model
 
   onModelSaved: (model, response, options) ->
     $.cookie('session_token', response['session_token'])
+    $.cookie('user_email', response['user_email'])

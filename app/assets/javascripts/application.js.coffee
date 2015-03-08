@@ -22,9 +22,9 @@
 
 @updateHeader = () ->
   if $.cookie('session_token')
-    $('#session-header').html(HandlebarsTemplates['sessions/header']({user_email: 'vasya', profile_link: 'www.google.com', signout_path: 'dfdf'}))
+    $('#session-header').html(HandlebarsTemplates['sessions/header']({user_email: $.cookie('user_email'), profile_link: 'www.google.com', signout_path: 'dfdf'}))
   else
-    $('#session-header').html(HandlebarsTemplates['sessions/header']({signin_path: 'dfdf'}))
+    $('#session-header').html(HandlebarsTemplates['sessions/header']({user_email: null, signin_path: 'dfdf'}))
 
 $ ->
   updateHeader()

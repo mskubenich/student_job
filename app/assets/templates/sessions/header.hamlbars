@@ -7,7 +7,7 @@
     .btn.btn-default.navbar-btn
       %a{ href: '#logout' }
         Sign Out
-= hb 'else' do
+= hb 'unless user_email' do
   %li
     %a{ href: '#login' }
       Login
