@@ -29,12 +29,17 @@ gem 'handlebars_assets'
 gem 'hamlbars', '~> 2.0'
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.0'
-  gem 'factory_girl_rails'
+  gem 'mysql2'
 end
 
-group :development, :test do
-  gem 'mysql2'
+group :test do
+  gem 'simplecov', require: false
+  gem 'cucumber-rails', require: false
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'database_cleaner'
+  gem 'rspec-rails', '~> 3.0'
+  gem 'factory_girl_rails'
 end
 
 group :production do

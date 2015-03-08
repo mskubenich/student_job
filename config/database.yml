@@ -9,10 +9,13 @@ development:
   <<: *default
   database: student_job_development
 
-test:
+test: &test
   <<: *default
   database: student_job_test
 
 production:
   <<: *default
   database: student_job_production
+
+cucumber:
+  <<: *test
