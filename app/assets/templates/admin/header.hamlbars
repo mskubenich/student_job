@@ -1,0 +1,23 @@
+= hb 'if admin_route' do
+  %li.active
+    %a{ href: '#admin/users' }
+      Users
+  %li
+    %a{ href: '#admin/articles' }
+      Articles
+  %li
+    %a{ href: '#admin/proposals' }
+      Proposals
+  %li
+    %a{ href: '#admin/cv' }
+      CV
+  = hb 'else'
+  %li.active
+    %a{ href: '#articles' }
+      Articles
+  %li
+    %a{ href: '#proposals' }
+      Proposals
+  %li
+    %a{ href: '#cv' }
+      CV

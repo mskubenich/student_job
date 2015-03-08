@@ -1,0 +1,31 @@
+%table.table.table-striped
+  %thead
+    %tr
+      %th
+        Id
+      %th
+        Email
+      %th
+        First Name
+      %th
+        Last Name
+      %th
+        Actions
+  %tbody
+    = hb 'each users' do
+      %tr
+        %td
+          = hb 'id'
+        %td
+          = hb 'email'
+        %td
+          = hb 'first_name'
+        %td
+          = hb 'last_name'
+        %td
+          %a.btn.btn-xs{ href: "#users/#{ hb 'id' }"}
+            %span.glyphicon.glyphicon-info-sign
+          %a.btn.btn-xs
+            %span.glyphicon.glyphicon-pencil
+          %a.btn.btn-xs
+            %span.glyphicon.glyphicon-remove

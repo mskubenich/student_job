@@ -16,5 +16,5 @@
     %a{ href: '#signup' }
       Signup
 %li
-  %a{ href: '#' }
+  %a{ href: '#admin/users' }
     %span.glyphicon.glyphicon-cog

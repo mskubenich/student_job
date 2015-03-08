@@ -9,5 +9,9 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :admin do
+    resources :users, only: [:index]
+  end
+
   root to: 'application#index'
 end

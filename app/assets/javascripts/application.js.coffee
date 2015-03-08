@@ -26,5 +26,10 @@
   else
     $('#session-header').html(HandlebarsTemplates['sessions/header']({user_email: null, signin_path: 'dfdf'}))
 
+  $('#roadmap-header').html(HandlebarsTemplates['admin/header']({admin_route: window.location.href.indexOf('admin') > -1}))
+
 $ ->
+  updateHeader()
+
+$(window).bind 'hashchange', () ->
   updateHeader()
