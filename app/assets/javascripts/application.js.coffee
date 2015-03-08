@@ -19,3 +19,12 @@
   $('#flash').append(alert)
   alert.fadeTo(2000, 500).slideUp 500, ->
     alert.alert 'close'
+
+@updateHeader = () ->
+  if $.cookie('session_token')
+    $('#session-header').html(HandlebarsTemplates['sessions/header']({user_email: 'vasya', profile_link: 'www.google.com', signout_path: 'dfdf'}))
+  else
+    $('#session-header').html(HandlebarsTemplates['sessions/header']({signin_path: 'dfdf'}))
+
+$ ->
+  updateHeader()

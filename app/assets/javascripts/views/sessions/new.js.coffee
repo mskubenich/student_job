@@ -24,11 +24,11 @@ class StudentJob.Views.SessionsNew extends Backbone.View
       model.set(this.name, this.value)
 
     this.model.save( null, {
-      success: ->
+      success: (model, response) ->
         showAlert 'success', 'Signed in successfully !'
-        $('#session-header').html(HandlebarsTemplates['sessions/header']({user_email: 'vasya', profile_link: 'www.google.com', signout_path: 'dfdf'}))
+        updateHeader()
         router.navigate("/", true)
       error: (model, response) ->
         showAlert 'danger', response.responseJSON.error
-        $('#session-header').html(HandlebarsTemplates['sessions/header']({signin_path: 'dfdf'}))
+        updateHeader()
     })
