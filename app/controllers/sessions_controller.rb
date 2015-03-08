@@ -3,13 +3,11 @@ class SessionsController < ApplicationController
   include SessionsHelper
 
   def create
-    user = User.find_by(email: params[:session][:email])
     if user && user.authenticate(params[:session][:password])
       sign_in user
-      redirect_to root_path
+      render json: { session_token: current_session.token }, status: :ok
     else
-      flash.now[:error] = 'Invalid email/password combination'
-      redirect_to root_path
+      render json: { error: ['Invalid email/password combination'] }, status: :unprocessable_entity
     end
   end
 

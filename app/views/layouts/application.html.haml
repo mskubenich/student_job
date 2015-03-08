@@ -35,7 +35,6 @@
             %li
               = link_to "Articles", '#articles'
           %ul.nav.navbar-nav.navbar-right
-            %h1
             - if current_user
               %li
                 %p.navbar-text
@@ -55,7 +54,11 @@
       .row
         .col-md-12
           = render_breadcrumbs
-          = bootstrap_flash
+          #flash
+            .alert.hide.alert-success{ role: 'alert' }
+              haha
+            .alert.hide.alert-danger{ role: 'alert' }
+              haha
           #container
       %br
       %br

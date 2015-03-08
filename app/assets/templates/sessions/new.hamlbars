@@ -3,7 +3,7 @@
     .col-md-6.col-md-offset-3.text-center
       %h1
         Sign in
-      %form{ action: '/sessions', method: 'post'}
+      %form#login-form{ action: '/sessions', method: 'post'}
         .form-horizontal
           %input{ type: 'text', name: 'session[email]', placeholder: 'Email', class: 'form-control'}
           %br
