@@ -15,3 +15,16 @@ window.StudentJob =
 $(document).ready ->
   StudentJob.initialize()
 
+  redirectToLogin = ->
+    locationhref = '#login'
+    location.href = locationhref
+
+  $doc = $(document)
+  $doc.ajaxSend (event, xhr) ->
+    authToken = $.cookie('session_token')
+    if authToken
+      xhr.setRequestHeader 'Authorization', 'Bearer ' + authToken
+  $doc.ajaxError (event, xhr) ->
+    if xhr.status == 401
+      redirectToLogin()
+      showAlert 'danger', 'Access Denied!'

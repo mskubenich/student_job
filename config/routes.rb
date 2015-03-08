@@ -13,5 +13,5 @@ Rails.application.routes.draw do
     resources :users, only: [:index]
   end
 
-  root to: 'application#index'
+  root to: 'pages#index'
 end

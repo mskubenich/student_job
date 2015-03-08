@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
+  skip_before_filter :authentikate_user, only: [:create]
 
-  include SessionsHelper
 
   def create
     user = User.find_by_email params[:session][:email]

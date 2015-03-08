@@ -2,11 +2,31 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
 
+  before_filter :authentikate_user
+
   layout 'application'
 
   include SessionsHelper
 
-  def index
-    render text: '', layout: true
+  private
+
+  def authentikate_user
+    if current_session
+      if Time.now - current_session[:updated_at] > 1.day
+        bad_request ['session invalid or expired'], 401
+      end
+      current_session[:updated_at] = Time.now
+      unless current_user
+        bad_request ['session invalid or expired'], 401
+        current_session.destroy
+      end
+    else
+      bad_request ['session invalid or expired'], 401
+    end
   end
+
+  def bad_request(errors, status = 200)
+    render(:json => {:errors => errors,  :success => false, :status => status}, :status => status) and return
+  end
+
 end
