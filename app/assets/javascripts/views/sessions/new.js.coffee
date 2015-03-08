@@ -18,13 +18,17 @@ class StudentJob.Views.SessionsNew extends Backbone.View
   onFormSubmit: (e) ->
     e.preventDefault()
     model = this.model
+    router = this.router
 
     this.$el.find('input[name]').each ->
       model.set(this.name, this.value)
 
     this.model.save( null, {
       success: ->
-        $('#flash .alert-success').html('Signed in successfully !').removeClass('hide')
+        showAlert 'success', 'Signed in successfully !'
+        $('#session-header').html(HandlebarsTemplates['sessions/header']({user_email: 'vasya', profile_link: 'www.google.com', signout_path: 'dfdf'}))
+        router.navigate("/", true)
       error: (model, response) ->
-        $('#flash .alert-danger').html(response.responseJSON.error).removeClass('hide')
+        showAlert 'danger', response.responseJSON.error
+        $('#session-header').html(HandlebarsTemplates['sessions/header']({signin_path: 'dfdf'}))
     })

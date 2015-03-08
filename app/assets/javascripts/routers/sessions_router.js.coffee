@@ -5,4 +5,5 @@ class StudentJob.Routers.Sessions extends Backbone.Router
 
   new: ->
     @page = new StudentJob.Views.SessionsNew
+    @page.router = this
     @page.render()
