@@ -1,4 +1,4 @@
-class StudentJob.Models.Users extends Backbone.Model
+class StudentJob.Models.User extends Backbone.Model
 
   initialize: (id) ->
     @id ||= id
@@ -10,4 +10,4 @@ class StudentJob.Models.Users extends Backbone.Model
     password_confirmation: null
 
   url: ->
-    '/users/' + @id + '.json?'
+    '/users/profile.json?'

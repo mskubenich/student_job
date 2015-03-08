@@ -2,7 +2,8 @@
   %li
     %p.navbar-text
       Hello
-      = hb 'user_email'
+      %a{ href: '#profile' }
+        = hb 'user_email'
   %li
     .btn.btn-default.navbar-btn
       %a{ href: '#logout' }

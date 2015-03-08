@@ -2,14 +2,14 @@ class StudentJob.Routers.Users extends Backbone.Router
 
   routes:
     'signup': 'new'
-    'users/:id': 'show'
+    'profile': 'profile'
 
   new: ->
     @page = new StudentJob.Views.UsersNew
     @page.render()
 
-  show: (id) ->
-    @user = new StudentJob.Models.User(id)
+  profile: () ->
+    @user = new StudentJob.Models.User()
 
     @usersShowView = new StudentJob.Views.UsersShow
       user: @user

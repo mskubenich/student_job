@@ -11,6 +11,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def profile
+    render json: current_user.to_json
+  end
+
   private
 
   def user_params

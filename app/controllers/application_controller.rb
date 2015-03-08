@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
 
   layout 'application'
 
+  include SessionsHelper
+
   def index
     render text: '', layout: true
   end

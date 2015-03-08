@@ -16,9 +16,6 @@ module SessionsHelper
   end
 
   def current_user
-    puts '+++++++++++='
-    puts current_session.inspect
-    puts '+++++++++++='
     @current_user ||= current_session.user if current_session
   end
 
