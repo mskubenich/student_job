@@ -11,6 +11,9 @@
   %li
     %a{ href: '#login' }
       Login
+  %li
+    %a{ href: '#signup' }
+      Signup
 %li
   %a{ href: '#' }
     %span.glyphicon.glyphicon-cog
