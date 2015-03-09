@@ -21,6 +21,7 @@ class ApplicationController < ActionController::Base
         current_session.destroy
       end
     else
+      create
       bad_request ['session invalid or expired'], 401
     end
   end

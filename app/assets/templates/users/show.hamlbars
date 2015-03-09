@@ -1,1 +1,7 @@
 = hb 'user'
+
+.container
+  .row
+    .col-md-6.col-md-offset-3.text-center
+      = hb 'if user' do
+        %h1 User #{( hb 'user.email')} Information
