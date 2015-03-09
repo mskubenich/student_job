@@ -7,6 +7,11 @@ Given /^I am on the login page$/ do
   click_on 'Login'
 end
 
+Given /^I am on the admin users page$/ do
+  visit root_path
+  find('[href="#admin/users"]').click
+end
+
 # When /^I go to (.+)$/ do |page_name|
 #   visit path_to(page_name)
 # end

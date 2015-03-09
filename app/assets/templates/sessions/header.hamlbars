@@ -1,13 +1,11 @@
 = hb 'if user_email' do
   %li
-    %p.navbar-text
+    %a{ href: '#profile' }
       Hello
-      %a{ href: '#profile' }
-        = hb 'user_email'
+      = hb 'user_email'
   %li
-    .btn.btn-default.navbar-btn
-      %a{ href: '#logout' }
-        Sign Out
+    %a{ href: '#logout' }
+      Sign Out
 = hb 'unless user_email' do
   %li
     %a{ href: '#login' }

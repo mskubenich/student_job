@@ -12,3 +12,11 @@ Article.create title: 'Студенти УжНУ почали користува
 
 u = User.create email: 'admin@gmail.com', password: 'qwerty', password_confirmation: 'qwerty'
 u.save
+
+
+puts 'Create roles ...'
+
+Role.destroy_all
+admin_role = Role.create name: 'admin'
+recruiter_role = Role.create name: 'recruiter'
+seeker_role = Role.create name: 'seeker'

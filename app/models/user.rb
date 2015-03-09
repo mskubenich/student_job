@@ -1,9 +1,9 @@
 class User < ActiveRecord::Base
   attr_accessor :password, :password_confirmation
-  has_and_belongs_to_many :role
+  has_and_belongs_to_many :roles
   has_many :sessions
 
-  before_save :encrypt_password
+  before_save :encrypt_password, :set_default_role
 
   validates :email,       presence: true, length: { maximum: 50 }
 
@@ -46,6 +46,10 @@ class User < ActiveRecord::Base
 
   def secure_hash(string)
     Digest::SHA2.hexdigest(string)
+  end
+
+  def set_default_role
+    self.roles << Role.where(name: 'seeker').first if self.roles.blank?
   end
 
 end
