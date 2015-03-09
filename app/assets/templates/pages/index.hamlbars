@@ -1,5 +1,9 @@
-.text-center
-  %h2
-    Welcome to the Student Job web portal.
-  %p
-    In future this can be awesome web application. Now we in development. Thanks for visit.
+.container
+  .row
+    .col-md-5.col-md-offset-7.text-center.lilac-block
+      .text-center
+        %h1.sj-header
+          Welcome to the Student Job web portal.
+        %h3
+          %p.sj-header
+            In future this can be awesome web application. Now we in development. Thanks for visit.

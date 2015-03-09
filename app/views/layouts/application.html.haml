@@ -1,4 +1,4 @@
-!!! 5
+!!!
 %html(lang="en")
   %head
     %meta(charset="utf-8")
@@ -17,28 +17,31 @@
     -#= favicon_link_tag 'apple-touch-icon-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png'
     -#= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon'
     = javascript_include_tag "application"
+    %link{ href: 'http://fonts.googleapis.com/css?family=Indie+Flower', rel: 'stylesheet', type: 'text/css' }
 
   %body
-    %nav.navbar.navbar-default.navbar-fixed-top(role="navigation")
+    .container#navbar
+      %nav.navbar.navbar-default.navbar-fixed-top(role="navigation")
+        .container
+          .navbar-header
+            -#%button.navbar-toggle(type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse")
+            -#  %span.icon-bar
+            -#  %span.icon-bar
+            -#  %span.icon-bar
+            = link_to '#', class: 'navbar-brand' do
+              %h1
+                %i.glyphicon.glyphicon-paperclip
+                Student Job
+          .navbar-collapse.collapse.navbar-responsive-collapse
+            %ul.nav.navbar-nav#roadmap-header
+            %ul.nav.navbar-nav.navbar-right#session-header
+    #wrap
       .container
-        .navbar-header
-          %button.navbar-toggle(type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse")
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-          = link_to '#', class: 'navbar-brand' do
-            Student Job
-        .navbar-collapse.collapse.navbar-responsive-collapse
-          %ul.nav.navbar-nav#roadmap-header
-          %ul.nav.navbar-nav.navbar-right#session-header
-    .container
-      .row
-        .col-md-12
-          = render_breadcrumbs
-          #flash
-          #container
-      %br
-      %br
-      %br
-      %footer
-        %p &copy; Company 2014
+        .row
+          .col-md-12
+            = render_breadcrumbs
+            #flash
+            #container
+    #footer
+      .container
+        %p &copy; Student Job 2014

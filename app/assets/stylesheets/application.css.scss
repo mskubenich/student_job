@@ -2,9 +2,95 @@
 //= require_self
 //= require_tree .
 
-body{
-  margin-top: 80px;
+html{
+  height: 100%;
 }
+
+body{
+  height: 100%;
+}
+
+#wrap{
+  min-height: 100%;
+  margin-top: -60px;
+  padding-top: 150px;
+  background-image: url('students-notebooks.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#container{
+
+}
+
+#footer{
+  padding: 10px;
+  text-align: center;
+  color: white;
+  border-top: 1px solid white;
+  height: 60px;
+}
+
 .pagination{
-    margin: 0;
+  margin: 0;
+}
+
+.navbar-brand,
+.navbar-nav li a {
+  font-size: 20px;
+  line-height: 100px;
+  height: 80px;
+  padding-top: 0;
+}
+
+.navbar-brand h1{
+  color: #cdbfe3;
+}
+
+.navbar-default, #footer{
+  background-color: #6f5499;
+  border: 0;
+}
+
+.navbar-default{
+  font-family: 'Indie Flower' !important;
+  border-bottom: 1px solid white;
+}
+
+.navbar-default .navbar-nav > li > a {
+  background-color: #6f5499;
+  color: #cdbfe3;
+}
+
+.navbar-default .navbar-nav > li{
+  &, &.active{
+    color: #cdbfe3;
+    a, a:hover{
+      background-color: #6f5499;
+    }
+  }
+  &.active a{
+    color: white;
+
+    &:hover{
+      color: white;
+    }
+  }
+
+  &:hover a{
+    color: white;
+  }
+}
+
+.lilac-block{
+  background-color: #6f5499;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.sj-header{
+  color: #cdbfe3;
+  font-family: 'Indie Flower' !important;
 }
