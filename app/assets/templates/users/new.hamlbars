@@ -15,7 +15,7 @@
           %br
           %input{ type: 'text', name: 'user[last_name]', placeholder: 'Last Name', class: 'form-control'}
           %br
-          %input{ type: 'date', name: 'user[date_of_birth]', placeholder: 'Last Name', class: 'form-control'}
+          %input{ type: 'date', name: 'user[date_of_birth]', placeholder: 'Date Of Birth', class: 'form-control'}
           %br
           %input{ type: 'text', name: 'user[country]', placeholder: 'Country', class: 'form-control'}
           %br
