@@ -1,4 +1,4 @@
-= hb 'user'
+= hb 'user.email'
 
 .container
   .row
