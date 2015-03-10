@@ -18,6 +18,6 @@
               %td
                 = hb 'user.last_name'
             %tr
-              %td Created:
+              %td Country:
               %td
-                = hb 'user.created_at'
+                = hb 'user.country'

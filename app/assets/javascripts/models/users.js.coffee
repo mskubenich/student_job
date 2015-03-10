@@ -8,6 +8,10 @@ class StudentJob.Models.User extends Backbone.Model
     email: null
     password: null
     password_confirmation: null
+    first_name: null
+    last_name: null
+    country: null
+
 
   url: ->
     '/users/profile.json?'

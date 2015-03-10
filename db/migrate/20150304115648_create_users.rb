@@ -9,6 +9,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string     :first_name
       t.string     :last_name
       t.references :role
+      t.string     :date_of_birth
+      t.string     :country
 
       t.timestamps
     end

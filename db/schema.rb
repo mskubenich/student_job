@@ -52,6 +52,8 @@ ActiveRecord::Schema.define(version: 20150309094148) do
     t.string   "first_name"
     t.string   "last_name"
     t.integer  "role_id"
+    t.string   "date_of_birth"
+    t.string   "country"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
