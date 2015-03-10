@@ -1,1 +1,23 @@
-= hb 'user'
+.container
+  .row
+    .col-md-5.col-md-offset-7.text-center.lilac-block
+      .text-center
+        %h1 User Information
+        %table
+          %tbody
+            %tr
+              %td Email:
+              %td
+                = hb 'user.email'
+            %tr
+              %td First Name:
+              %td
+                = hb 'user.first_name'
+            %tr
+              %td Last Name:
+              %td
+                = hb 'user.last_name'
+            %tr
+              %td Created:
+              %td
+                = hb 'user.created_at'
