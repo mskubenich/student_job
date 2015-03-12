@@ -6,6 +6,8 @@ class StudentJob.Routers.Users extends Backbone.Router
 
   new: ->
     @page = new StudentJob.Views.UsersNew
+    @page.model = new StudentJob.Models.User()
+    @page.router = this
     @page.render()
 
   profile: () ->

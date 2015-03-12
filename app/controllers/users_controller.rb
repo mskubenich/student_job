@@ -6,14 +6,13 @@ class UsersController < ApplicationController
 
   def create
     # TODO need to login after add new user and show message if wrong params.
-    @user = User.new(user_params)
+   @user = User.new(user_params)
     if @user.save
         sign_in @user
-        # render json: { user_email: user.email, session_token: current_session.token }, status: :ok
+        render json: { user_email: @user.email, session_token: current_session.token }, status: :ok
     else
-      # render json: { error: ['Invalid email/password combination'] }, status: :unprocessable_entity
+      render json: { error: @user.errors.full_messages }, status: :unprocessable_entity
     end
-    redirect_to root_path
   end
 
   def profile
@@ -23,6 +22,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation, :first_name, :last_name, :date_of_birth, :country)
+    params.require(:user).permit(:id, :email, :password, :password_confirmation, :first_name, :last_name, :date_of_birth, :country)
   end
 end
