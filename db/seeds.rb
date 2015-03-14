@@ -9,6 +9,12 @@ Article.create title: 'Студенти УжНУ почали користува
 Article.create title: 'Студенти УжНУ почали користуватися нашим сайтом4.', body: 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum '
 Article.create title: 'Студенти УжНУ почали користуватися нашим сайтом5.', body: 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum '
 
+Category.create title: 'Сільське госодарство', description: 'test 1', parentId: 0
+
+Vacantion.create title: 'Title Vacantion 1', description: 'Test descriprion 1 '
+Vacantion.create title: 'Title Vacantion 2', description: 'Test descriprion 2 '
+Vacantion.create title: 'Title Vacantion 3', description: 'Test descriprion 3 '
+
 
 u = User.create email: 'admin@gmail.com', password: 'qwerty', password_confirmation: 'qwerty'
 u.save
