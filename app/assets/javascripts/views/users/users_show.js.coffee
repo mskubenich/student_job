@@ -11,4 +11,4 @@ class StudentJob.Views.UsersShow extends Backbone.View
   render: ->
     @user.fetch
       async: false
-    $(@$el).html @template({user: JSON.stringify(@user.toJSON())})
+    $(@$el).html @template({user: @user.toJSON()})

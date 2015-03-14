@@ -1,1 +1,29 @@
-= hb 'user'
+-#= hb 'user'
+
+.container
+  .row
+    .col-md-6.col-md-offset-3.text-center
+      = hb 'if user' do
+        %h1 User #{( hb 'user.email')} Information
+
+  .row
+    .col-md-12
+      %table
+        %tr
+          %th First Name
+          %td #{( hb 'user.first_name')}
+        %tr
+          %th Last Name
+          %td #{( hb 'user.last_name')}
+        %tr
+          %th Email
+          %td #{( hb 'user.email')}
+        %tr
+          %th Date Of Birth
+          %td #{( hb 'user.date_of_birth')}
+        %tr
+          %th Country
+          %td #{( hb 'user.country')}
+        %tr
+          %th Region
+          %td #{( hb 'user.region')}
