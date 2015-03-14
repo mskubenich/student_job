@@ -11,4 +11,9 @@
           %input{ type: 'password', name: 'session[password]', placeholder: 'Password', class: 'form-control sj-input'}
         %br
         .text-center
+          %i.fa.fa-twitter.fa-sj
+          %i.fa.fa-facebook.fa-sj
+          %i.fa.fa-google-plus.fa-sj
+        %br
+        .text-center
           %input{ type: 'submit', class: "sj-btn sj-btn-primary"}
