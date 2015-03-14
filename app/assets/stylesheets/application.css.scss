@@ -87,9 +87,28 @@ body{
   background-color: rgba(111, 84, 153, 0.9);
   border-radius: 20px;
   padding: 20px;
+  border: 1px solid white;
 }
 
 .sj-header{
   color: white;
   font-family: 'Indie Flower' !important;
+}
+
+.sj-alert{
+  &.sj-alert-danger{
+    background-color: rgba(255, 30, 35, 0.61);
+  }
+  &.sj-alert-success{
+    background-color: rgba(0, 215, 24, 0.70);
+  }
+  background-color: rgba(111, 84, 153, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid white;
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  color: white;
+  font-weight: bolder;
 }

@@ -7,7 +7,7 @@ Given /^I logged in as an admin with email '(.+?)'$/ do |email|
   sleep 1
 end
 
-Given /^I logged in as a student/ do
+Given /^I logged in as a student with email '(.+?)'$/ do |email|
   @student = create :student
   step 'I am on the login page'
   step "I fill in \"session[email]\" with \"#{ @student.email }\""
@@ -16,7 +16,7 @@ Given /^I logged in as a student/ do
   sleep 1
 end
 
-Given /^I logged in as a recruiter/ do
+Given /^I logged in as a recruiter with email '(.+?)'$/ do |email|
   @recruiter = create :recruiter
   step 'I am on the login page'
   step "I fill in \"session[email]\" with \"#{ @recruiter.email }\""

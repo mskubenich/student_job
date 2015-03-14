@@ -4,8 +4,8 @@ FactoryGirl.define do
       name 'admin'
     end
 
-    factory :seeker_role do
-      name 'seeker'
+    factory :student_role do
+      name 'student'
     end
 
     factory :recruiter_role do

@@ -92,7 +92,7 @@ end
 # Then /^I should be on (.+)$/ do |page_name|
 #   current_path.should == path_to(page_name)
 # end
-#
-# Then /^page should have (.+) message "([^\"]*)"$/ do |type, text|
-#   page.has_css?("p.#{type}", :text => text, :visible => true)
-# end
+
+Then /^I see (.+) alert '(.+)'$/ do |type, message|
+  page.has_css?(".sj-alert-#{type}", :text => message, :visible => true)
+end

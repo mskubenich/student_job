@@ -28,5 +28,5 @@ $(document).ready ->
       xhr.setRequestHeader 'Authorization', 'Bearer ' + authToken
   $doc.ajaxError (event, xhr) ->
     if xhr.status == 401
-      redirectToLogin()
-      showAlert 'danger', xhr.responseJSON.errors.join(', ')
+      location.href = '#'
+      showAlert 'danger', xhr.responseJSON.errors

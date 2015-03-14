@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :user do
     sequence(:email){|n| "user_#{n}@gmail.com" }
-    roles { [FactoryGirl.create(:seeker_role)] }
+    roles { [FactoryGirl.create(:student_role)] }
     password                      'password'
     password_confirmation         'password'
     first_name                    'Indiana'
