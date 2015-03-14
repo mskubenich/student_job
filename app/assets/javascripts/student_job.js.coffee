@@ -29,4 +29,4 @@ $(document).ready ->
   $doc.ajaxError (event, xhr) ->
     if xhr.status == 401
       redirectToLogin()
-      showAlert 'danger', 'Access Denied!'
+      showAlert 'danger', xhr.responseJSON.errors.join(', ')

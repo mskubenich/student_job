@@ -1,4 +1,4 @@
-class StudentJob.Routers.AdminUsers extends Backbone.Router
+class StudentJob.Routers.AdminUsers extends StudentJob.Routers.Admin
 
   routes:
     'admin/users': 'index'

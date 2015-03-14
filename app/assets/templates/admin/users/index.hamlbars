@@ -1,8 +1,6 @@
-%table.table.table-striped
+%table.table.table-striped#admin-users-table
   %thead
     %tr
-      %th
-        Id
       %th
         Email
       %th
@@ -14,8 +12,6 @@
   %tbody
     = hb 'each users' do
       %tr
-        %td
-          = hb 'id'
         %td
           = hb 'email'
         %td

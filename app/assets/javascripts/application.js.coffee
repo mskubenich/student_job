@@ -4,6 +4,7 @@
 #= require bootstrap
 #= require underscore
 #= require backbone
+#= require backbone-router-callbacks
 #= require student_job
 #= require handlebars.runtime
 #= require_tree ../templates

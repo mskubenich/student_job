@@ -1,4 +1,4 @@
-class StudentJob.Routers.Pages extends Backbone.Router
+class StudentJob.Routers.Pages extends StudentJob.Routers.Application
 
   routes:
     "": "index"

@@ -1,4 +1,4 @@
-class StudentJob.Routers.Sessions extends Backbone.Router
+class StudentJob.Routers.Sessions extends StudentJob.Routers.Application
 
   routes:
     'login': 'new'

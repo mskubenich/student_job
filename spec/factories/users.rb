@@ -12,9 +12,9 @@ FactoryGirl.define do
       roles { [create(:admin_role)] }
     end
 
-    factory :seeker do
+    factory :student do
       sequence(:email){|n| "seeker_#{n}@gmail.com" }
-      roles { [create(:seeker_role)] }
+      roles { [create(:student_role)] }
     end
 
     factory :recruiter do

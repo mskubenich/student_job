@@ -1,4 +1,4 @@
-class StudentJob.Routers.Vacantions extends Backbone.Router
+class StudentJob.Routers.Vacantions extends StudentJob.Routers.Application
 
   routes:
     'vacantions': 'index'

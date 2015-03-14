@@ -12,22 +12,22 @@ class ApplicationController < ActionController::Base
 
   def authentikate_user
     if current_session
-      if Time.now - current_session[:updated_at] > 1.day
-        bad_request ['session invalid or expired'], 401
+      if Time.now - current_session[:updated_at] > 1.day || !current_user
+        current_session.destroy
+        bad_request ['Session invalid or expired.'], 401
       end
       current_session[:updated_at] = Time.now
-      unless current_user
-        bad_request ['session invalid or expired'], 401
-        current_session.destroy
-      end
     else
-      create
-      bad_request ['session invalid or expired'], 401
+      bad_request ['Session invalid or expired.'], 401
     end
   end
 
   def bad_request(errors, status = 200)
     render(:json => {:errors => errors,  :success => false, :status => status}, :status => status) and return
+  end
+
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to root_url, :alert => exception.message
   end
 
 end

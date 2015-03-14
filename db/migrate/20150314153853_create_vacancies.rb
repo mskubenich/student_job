@@ -1,6 +1,6 @@
-class CreateVacantions < ActiveRecord::Migration
+class CreateVacancies < ActiveRecord::Migration
   def change
-    create_table :vacantions do |t|
+    create_table :vacancies do |t|
       t.string :title
       t.text :description
 

@@ -1,4 +1,4 @@
-class StudentJob.Routers.Users extends Backbone.Router
+class StudentJob.Routers.Users extends StudentJob.Routers.Application
 
   routes:
     'signup': 'new'

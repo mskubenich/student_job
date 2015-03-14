@@ -4,9 +4,7 @@ class User < ActiveRecord::Base
   has_many :sessions
 
   before_save :encrypt_password, :set_default_role
-
-  validates :email,       presence: true, length: { maximum: 50 }
-
+  validates :email, presence: true, length: { maximum: 50 }
   validates :password, length: { minimum: 6 }, confirmation: true, presence: true, :if => lambda{ new_record? || !password.nil? }
 
   def authenticate(password)
@@ -14,19 +12,19 @@ class User < ActiveRecord::Base
   end
 
   def admin?
-    self.role.present? && self.role.name == 'admin'
+    self.roles.map(&:name).include? 'admin'
   end
 
   def student?
-    self.role.present? && self.role.name == 'student'
+    self.roles.map(&:name).include? 'student'
   end
 
   def recruiter?
-    self.role.present? && self.role.name == 'recruiter'
+    self.roles.map(&:name).include? 'recruiter'
   end
 
   def guest?
-    !self.role.present?
+    self.roles.blank?
   end
 
   private
@@ -49,7 +47,7 @@ class User < ActiveRecord::Base
   end
 
   def set_default_role
-    self.roles << Role.where(name: 'seeker').first if self.roles.blank?
+    self.roles << Role.where(name: 'student').first if self.roles.blank?
   end
 
 end

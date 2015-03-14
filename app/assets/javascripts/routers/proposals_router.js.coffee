@@ -1,4 +1,4 @@
-class StudentJob.Routers.Proposals extends Backbone.Router
+class StudentJob.Routers.Proposals extends StudentJob.Routers.Application
 
   routes:
     'proposals': 'index'
