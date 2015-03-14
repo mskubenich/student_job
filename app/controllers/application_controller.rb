@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
       end
       current_session[:updated_at] = Time.now
     else
-      bad_request ['Session invalid or expired.'], 401
+      bad_request ['Please Log In.'], 401
     end
   end
 
