@@ -87,6 +87,7 @@ body{
   background-color: rgba(111, 84, 153, 0.9);
   border-radius: 20px;
   padding: 20px;
+  margin-bottom: 20px;
   border: 1px solid white;
 }
 
@@ -111,4 +112,46 @@ body{
   left: 40px;
   color: white;
   font-weight: bolder;
+}
+
+.sj-btn{
+  border-radius: 10px;
+  border: 2px solid #cdbfe3;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #cdbfe3;
+  font-weight: bolder;
+  outline: none;
+  &:hover{
+    color: white;
+    border-color: white;
+  }
+}
+
+.sj-input{
+  background-color: rgba(111, 84, 153, 0.3);
+  outline: none;
+  border-radius: 10px;
+  border: 2px solid #cdbfe3;
+  padding: 20px 20px;
+  color: #cdbfe3;
+  font-size: 17px;
+  &:hover{
+    color: white;
+    border-color: white;
+  }
+  &::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #cdbfe3;
+  }
+  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #cdbfe3;
+    opacity:  1;
+  }
+  &::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #cdbfe3;
+    opacity:  1;
+  }
+  &:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #cdbfe3;
+  }
 }

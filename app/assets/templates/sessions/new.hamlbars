@@ -6,9 +6,9 @@
       %br
       %form#login-form{ action: '/sessions', method: 'post'}
         .form-horizontal
-          %input{ type: 'email', name: 'session[email]', placeholder: 'Email', class: 'form-control'}
+          %input{ type: 'email', name: 'session[email]', placeholder: 'Email', class: 'form-control sj-input'}
           %br
-          %input{ type: 'password', name: 'session[password]', placeholder: 'Password', class: 'form-control'}
+          %input{ type: 'password', name: 'session[password]', placeholder: 'Password', class: 'form-control sj-input'}
         %br
         .text-center
-          %input{ type: 'submit', class: "btn btn-primary btn-lg"}
+          %input{ type: 'submit', class: "sj-btn sj-btn-primary"}
