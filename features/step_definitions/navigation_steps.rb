@@ -12,6 +12,11 @@ Given /^I am on the admin users page$/ do
   find('[href="#admin/users"]').click
 end
 
+Given /^I am on the admin articles page$/ do
+  visit root_path
+  page.execute_script("window.location.hash = 'admin/articles'")
+end
+
 # When /^I go to (.+)$/ do |page_name|
 #   visit path_to(page_name)
 # end

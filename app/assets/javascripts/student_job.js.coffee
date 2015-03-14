@@ -9,9 +9,10 @@ window.StudentJob =
     window.routerVacantions = new StudentJob.Routers.Vacantions()
     window.routerCategorys = new StudentJob.Routers.Categorys()
     window.routerArticles = new StudentJob.Routers.Articles()
+    window.routerArticlesAdmin = new StudentJob.Routers.AdminArticles()
     window.routerSessions = new StudentJob.Routers.Sessions()
     window.routerUsers = new StudentJob.Routers.Users()
-    window.routerUsers = new StudentJob.Routers.AdminUsers()
+    window.routerAdminUsers = new StudentJob.Routers.AdminUsers()
     Backbone.history.start()
 
 $(document).ready ->

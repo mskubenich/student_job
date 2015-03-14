@@ -1,0 +1,27 @@
+%table.table.table-striped#admin-articles-table
+  %thead
+    %tr
+      %th
+        Email
+      %th
+        Created At
+      %th
+        Updated At
+      %th
+        Actions
+  %tbody
+    = hb 'each articles' do
+      %tr
+        %td
+          = hb 'title'
+        %td
+          = hb 'created_at'
+        %td
+          = hb 'updated_at'
+        %td
+          %a.btn.btn-xs{ href: "#articles/#{ hb 'id' }"}
+            %span.glyphicon.glyphicon-info-sign
+          %a.btn.btn-xs
+            %span.glyphicon.glyphicon-pencil
+          %a.btn.btn-xs
+            %span.glyphicon.glyphicon-remove

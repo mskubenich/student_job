@@ -4,4 +4,4 @@ class StudentJob.Models.AdminUser extends Backbone.Model
     @id ||= id
 
   url: ->
-    'admin/users.json?'
+    '/admin/users/' + @id + '.json?'
