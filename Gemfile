@@ -28,6 +28,7 @@ gem 'backbone-on-rails'
 gem 'handlebars_assets'
 gem 'hamlbars', '~> 2.0'
 gem 'font-awesome-rails'
+gem 'ckeditor_rails'
 
 group :development, :test do
   gem 'mysql2'

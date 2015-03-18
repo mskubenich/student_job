@@ -7,6 +7,7 @@
 #= require backbone-router-callbacks
 #= require student_job
 #= require handlebars.runtime
+#= require ckeditor-jquery
 #= require_tree ../templates
 #= require_tree ./models
 #= require_tree ./collections

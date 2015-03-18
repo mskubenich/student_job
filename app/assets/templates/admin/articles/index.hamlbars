@@ -1,3 +1,6 @@
+%a.btn.btn-info{ href: '#admin/articles/new' }
+  New Article
+
 %table.table.table-striped#admin-articles-table
   %thead
     %tr
