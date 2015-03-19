@@ -12,3 +12,11 @@ Given /^A minimal set of articles exist$/ do
   @article1 = create :article, title: 'We are open !'
   @article2 = create :article, title: 'Welcome to our site !'
 end
+
+Then /^I see article validation errors$/ do
+  page.should have_content('can\'t be blank')
+end
+
+Then /^I go to new article page$/ do
+  page.execute_script("$('a[href=\"#admin/articles/new\"]')[0].click()")
+end

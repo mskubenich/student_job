@@ -25,3 +25,10 @@ Feature: Admin Articles
   Scenario: Not logged in users can not view articles list
     When I am on the admin articles page
     Then I see danger alert 'Admin only allowed to view this page !'
+
+  Scenario: Creating article for admin
+    Given I logged in as an admin with email 'admin@sj.com'
+    When I am on the admin articles page
+    Then I go to new article page
+    When I click "Save"
+    Then I see article validation errors
