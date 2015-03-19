@@ -4,14 +4,20 @@
     .col-sm-10
       %h2
         New Article
+        = hb('article')
   .form-group
     %label.col-sm-2.control-label Title
+    %span.validation_errors
+      = hb('errors.title')
     .col-sm-10
-      %input.form-control{placeholder: "Title ...", name: 'title'}
+      %input.form-control{placeholder: "Title ...", name: 'title', value: hb('article.title')}
   .form-group
-    %label.col-sm-2.control-label{:for => "inputPassword3"} Description
+    %label.col-sm-2.control-label{:for => "inputPassword3"} Body
+    %span.validation_errors
+      = hb('errors.body')
     .col-sm-10
       %textarea.form-control.ckeditor{name: 'body', placeholder: "Body ...", rows: 25 }
+        = hb('article.body')
   .form-group
     .col-sm-offset-2.col-sm-10
       %input.btn.btn-default{type: "submit", value: 'Save'}

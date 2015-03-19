@@ -6,7 +6,7 @@ class StudentJob.Views.AdminArticlesNew extends Backbone.View
     $('#container')
 
   render: ->
-    $(@$el).html @template()
+    $(@$el).html @template({ article: this.model.toJSON().article, errors: this.errors })
     $('.ckeditor').ckeditor({
 #      optional config
     });
@@ -28,11 +28,14 @@ class StudentJob.Views.AdminArticlesNew extends Backbone.View
     this.$el.find('input[name], textarea[name]').each ->
       model.set(this.name, this.value)
 
+    self = this
+
     this.model.save( null, {
       success: (model, response) ->
         showAlert 'success', 'Article successfuly created !'
         router.navigate("/admin/articles", true)
       error: (model, response) ->
-        showAlert 'danger', response.responseJSON.error
-        updateHeader()
+        self.errors = response.responseJSON.errors
+        console.log(JSON.stringify(model))
+        self.render()
     })
