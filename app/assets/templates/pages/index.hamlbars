@@ -1,6 +1,18 @@
 .container
   .row
-    .col-md-5.col-md-offset-7.text-center.lilac-block
+    .col-md-7.text-center.lilac-block
+      .text-center
+        %h1.sj-header
+          Last Articles
+        %table.table
+          %tbody
+            - Article.order('created_at desc').last(5).each do |article|
+              %tr
+                %td
+                  %h4
+                    = article.title
+
+    .col-md-4.text-center.col-md-offset-1.lilac-block
       .text-center
         %h1.sj-header
           Welcome to the Student Job web portal.
