@@ -8,6 +8,7 @@
 #= require student_job
 #= require handlebars.runtime
 #= require ckeditor-jquery
+#= require twbs-pagination
 #= require_tree ../templates
 #= require_tree ./models
 #= require_tree ./collections

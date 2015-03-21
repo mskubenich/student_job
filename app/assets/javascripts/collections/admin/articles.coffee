@@ -4,3 +4,7 @@ class StudentJob.Collections.AdminArticles extends Backbone.Collection
 
   url: ->
     '/admin/articles.json?'
+
+  parse: (json) ->
+    @total = json.total
+    return json.articles

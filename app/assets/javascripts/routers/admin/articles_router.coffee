@@ -7,7 +7,7 @@ class StudentJob.Routers.AdminArticles extends StudentJob.Routers.Admin
   index: ->
     @articles = new StudentJob.Collections.AdminArticles()
     @page = new StudentJob.Views.AdminArticlesIndex({articles: @articles})
-    @page.render()
+    @articles.fetch()
 
   new: ->
     @page = new StudentJob.Views.AdminArticlesNew()

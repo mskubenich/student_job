@@ -2,8 +2,8 @@ class Admin::ArticlesController < AdminController
   load_and_authorize_resource
 
   def index
-    # TODO paginate
-    @articles = Article.all
+    @articles = Article.paginate(page: params[:page] || 1, per_page: 20)
+    @total = Article.count
   end
 
   def create
