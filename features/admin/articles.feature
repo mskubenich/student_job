@@ -26,9 +26,18 @@ Feature: Admin Articles
     When I am on the admin articles page
     Then I see danger alert 'Admin only allowed to view this page !'
 
-  Scenario: Creating article for admin
+  Scenario: Article validations
     Given I logged in as an admin with email 'admin@sj.com'
     When I am on the admin articles page
     Then I go to new article page
-    When I click "Save"
+    When I press "Save"
     Then I see article validation errors
+
+  Scenario: Creating articles
+    Given I logged in as an admin with email 'admin@sj.com'
+    When I am on the admin articles page
+    Then I go to new article page
+    And I fill in "title" with "Test Article"
+    And I fill body with "Article Body"
+    When I press "Save"
+    Then Article titled "Test Article" should be created

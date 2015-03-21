@@ -20,3 +20,16 @@ end
 Then /^I go to new article page$/ do
   page.execute_script("$('a[href=\"#admin/articles/new\"]')[0].click()")
 end
+
+When /^I fill body with "(.*)"$/ do |content|
+  page.execute_script <<-SCRIPT
+    CKEDITOR.instances['body'].setData("#{content}");
+    $('textarea[name="body"]').text("#{content}");
+  SCRIPT
+end
+
+Then /^Article titled "(.*)" should be created$/ do |title|
+  sleep 1
+  matched_articles = Article.where title: title
+  expect(matched_articles.count).to eq(1)
+end
