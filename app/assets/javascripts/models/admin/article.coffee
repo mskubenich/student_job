@@ -1,5 +1,8 @@
 class StudentJob.Models.AdminArticle extends Backbone.Model
 
+  defaults:
+    id: null
+
   initialize: (id) ->
     @id ||= id
 
@@ -12,7 +15,9 @@ class StudentJob.Models.AdminArticle extends Backbone.Model
 
   beforeSave: (key, val, options) ->
     this.attributes = {
+      id: this.attributes['id'],
       article: {
+        id: this.attributes['id'],
         title: this.attributes['title'],
         body: this.attributes['body']
       }

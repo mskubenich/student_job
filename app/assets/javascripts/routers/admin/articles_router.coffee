@@ -4,6 +4,7 @@ class StudentJob.Routers.AdminArticles extends StudentJob.Routers.Admin
     'admin/articles': 'index'
     'admin/articles/new': 'new'
     'admin/articles/:id/destroy': 'destroy'
+    'admin/articles/:id/edit': 'edit'
 
   index: ->
     @articles = new StudentJob.Collections.AdminArticles()
@@ -11,7 +12,14 @@ class StudentJob.Routers.AdminArticles extends StudentJob.Routers.Admin
     @articles.fetch()
 
   new: ->
-    @page = new StudentJob.Views.AdminArticlesNew()
+    @page = new StudentJob.Views.AdminArticlesNewEdit()
+    @page.router = this
+    @page.render()
+
+  edit: (id) ->
+    @article = new StudentJob.Models.AdminArticle(id: id)
+    @article.fetch({async: false})
+    @page = new StudentJob.Views.AdminArticlesNewEdit(article: @article)
     @page.router = this
     @page.render()
 

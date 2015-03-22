@@ -16,7 +16,7 @@ class StudentJob.Views.AdminArticlesIndex extends Backbone.View
 
   renderPagination: ->
     self = this
-    pages_count = Math.ceil(@articles.total / 20) or 1
+    pages_count = Math.ceil(@articles.total / 10) or 1
     start_page = @page or 1
     pagination = @$el.find('.articles-pagination')
     pagination.empty()

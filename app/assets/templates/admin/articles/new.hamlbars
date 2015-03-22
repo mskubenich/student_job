@@ -3,7 +3,10 @@
     %label.col-sm-2.control-label
     .col-sm-10
       %h2
-        New Article
+        = hb('if article.id') do
+          Edit Article
+          = hb('else')
+          New Article
   .form-group
     %label.col-sm-2.control-label Title
     %span.validation_errors

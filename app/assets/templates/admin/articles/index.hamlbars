@@ -5,6 +5,7 @@
     .col-md-2.text-right
       %a.btn.btn-info{ href: '#admin/articles/new' }
         New Article
+        = hb('article')
   .row
     .col-md-12
       %table.table.table-striped#admin-articles-table
@@ -30,7 +31,8 @@
               %td
                 %a.btn.btn-xs{ href: "#articles/#{ hb 'id' }"}
                   %span.glyphicon.glyphicon-info-sign
-                %a.btn.btn-xs
+                -#TODO should link to article
+                %a.btn.btn-xs{ href: "#admin/articles/#{ hb 'id' }/edit"}
                   %span.glyphicon.glyphicon-pencil
                 %a.btn.btn-xs{ href: "#admin/articles/#{ hb 'id' }/destroy"}
                   %span.glyphicon.glyphicon-remove

@@ -14,10 +14,11 @@ Given /^A minimal set of articles exist$/ do
 end
 
 Then /^I see article validation errors$/ do
-  page.should have_content('can\'t be blank')
+  expect(page).to have_content('can\'t be blank')
 end
 
 Then /^I go to new article page$/ do
+  wait_for_ajax
   page.execute_script("$('a[href=\"#admin/articles/new\"]')[0].click()")
 end
 

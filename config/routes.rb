@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :users, only: [:index]
-    resources :articles, only: [:index, :create, :destroy]
+    resources :articles, except: [:new, :edit]
   end
 
   root to: 'pages#index'

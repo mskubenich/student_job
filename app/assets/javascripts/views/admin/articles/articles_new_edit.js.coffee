@@ -1,4 +1,4 @@
-class StudentJob.Views.AdminArticlesNew extends Backbone.View
+class StudentJob.Views.AdminArticlesNewEdit extends Backbone.View
 
   template: HandlebarsTemplates['admin/articles/new']
 
@@ -6,13 +6,16 @@ class StudentJob.Views.AdminArticlesNew extends Backbone.View
     $('#container')
 
   render: ->
-    $(@$el).html @template({ article: this.model.toJSON().article, errors: this.errors })
+    $(@$el).html @template({ article: this.model.toJSON(), errors: this.errors })
     $('.ckeditor').ckeditor({
 #      optional config
     });
 
-  initialize: ->
-    this.model = new StudentJob.Models.AdminArticle()
+  initialize: (options = {}) ->
+    if options.article
+      this.model = options.article
+    else
+      this.model = new StudentJob.Models.AdminArticle()
 
   events: {
     'click #admin-article-form input[type="submit"]': 'onFormSubmit'
@@ -30,12 +33,14 @@ class StudentJob.Views.AdminArticlesNew extends Backbone.View
 
     self = this
 
+    console.log JSON.stringify(this.model)
+
     this.model.save( null, {
       success: (model, response) ->
-        showAlert 'success', 'Article successfuly created !'
+        showAlert 'success', 'Article successfuly updated !'
+        self.undelegateEvents();
         router.navigate("/admin/articles", true)
       error: (model, response) ->
         self.errors = response.responseJSON.errors
-        console.log(JSON.stringify(model))
         self.render()
     })
