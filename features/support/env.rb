@@ -71,3 +71,10 @@ end
 Capybara.javascript_driver = :chrome
 
 Capybara.default_wait_time = 15
+
+
+def wait_for_ajax
+  loop do
+    break if page.evaluate_script('$.active') == 0
+  end
+end

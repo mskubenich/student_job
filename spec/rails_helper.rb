@@ -10,3 +10,9 @@ RSpec.configure do |config|
 
   config.include FactoryGirl::Syntax::Methods
 end
+
+def wait_for_ajax
+  loop do
+    break if page.evaluate_script('$.active') == 0
+  end
+end

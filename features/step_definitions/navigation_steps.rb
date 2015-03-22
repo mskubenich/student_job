@@ -101,3 +101,16 @@ end
 Then /^I see (.+) alert '(.+)'$/ do |type, message|
   page.has_css?(".sj-alert-#{type}", :text => message, :visible => true)
 end
+
+When /^I accept the confirmation/ do
+  sleep 1 # prevent test from failing by waiting for popup
+  if page.driver.class == Capybara::Selenium::Driver
+    # page.driver.browser.switch_to.alert.text.should eq(title)
+    page.driver.browser.switch_to.alert.accept
+  elsif page.driver.class == Capybara::Webkit::Driver
+    # page.driver.browser.confirm_messages.should eq(title)
+    page.driver.browser.accept_js_confirms
+  else
+    raise "Unsupported driver"
+  end
+end

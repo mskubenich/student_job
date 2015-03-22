@@ -33,3 +33,14 @@ Then /^Article titled "(.*)" should be created$/ do |title|
   matched_articles = Article.where title: title
   expect(matched_articles.count).to eq(1)
 end
+
+Then /^Article "(.*)" should be destroyed$/ do |title|
+  sleep 1
+  matched_articles = Article.where title: title
+  expect(matched_articles.count).to eq(0)
+end
+
+Then /^I remove first article$/ do
+  wait_for_ajax
+  all('.glyphicon-remove').first.click
+end

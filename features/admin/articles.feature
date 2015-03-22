@@ -41,3 +41,11 @@ Feature: Admin Articles
     And I fill body with "Article Body"
     When I press "Save"
     Then Article titled "Test Article" should be created
+
+  Scenario: View articles list for admin
+    Given I logged in as an admin with email 'admin@sj.com'
+    And A minimal set of articles exist
+    When I am on the admin articles page
+    And I remove first article
+    And I accept the confirmation
+    Then Article "We are open !" should be destroyed
