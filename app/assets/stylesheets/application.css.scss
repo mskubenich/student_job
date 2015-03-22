@@ -97,6 +97,32 @@ body{
   font-family: 'Indie Flower' !important;
 }
 
+.position_center{
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+.trancate_text{
+  color: white;
+  width: 500px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.trancate_text_article{
+  color: white;
+  width: 650px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.full_article{
+  color: white;
+}
+
 .sj-alert{
   &.sj-alert-danger{
     background-color: rgba(255, 30, 35, 0.61);

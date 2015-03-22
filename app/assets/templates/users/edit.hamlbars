@@ -1,0 +1,25 @@
+.container
+  .row
+    .col-md-6.col-md-offset-3.text-center
+      %h1
+        Sign Up
+      %form{ action: '/users', method: 'post'}
+        .form-horizontal
+          %input{ type: 'text', name: 'user[email]', placeholder: 'Email', class: 'form-control'}
+          %br
+          %input{ type: 'password', name: 'user[password]', placeholder: 'Password', class: 'form-control'}
+          %br
+          %input{ type: 'password', name: 'user[password_confirmation]', placeholder: 'Confirm Password', class: 'form-control'}
+          %br
+          %input{ type: 'text', name: 'user[first_name]', placeholder: 'First Name', class: 'form-control'}
+          %br
+          %input{ type: 'text', name: 'user[last_name]', placeholder: 'Last Name', class: 'form-control'}
+          %br
+          %input{ type: 'date', name: 'user[date_of_birth]', placeholder: 'Date Of Birth', class: 'form-control'}
+          %br
+          %input{ type: 'text', name: 'user[country]', placeholder: 'Country', class: 'form-control'}
+          %br
+          %input{ type: 'text', name: 'user[region]', placeholder: 'Region', class: 'form-control'}
+        %br
+        .text-center
+          %input{ type: 'submit', class: "btn btn-primary btn-lg"}

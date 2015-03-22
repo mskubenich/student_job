@@ -9,8 +9,11 @@
             - Article.order('created_at desc').last(5).each do |article|
               %tr
                 %td
-                  %h4
-                    = article.title
+                  %a{ href: "#articles/#{ article.id }"}
+                    %h4.sj-header
+                      = article.title
+                  %h6.trancate_text
+                    = article.body
 
     .col-md-4.text-center.col-md-offset-1.lilac-block
       .text-center

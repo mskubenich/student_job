@@ -1,13 +1,16 @@
 class ArticlesController < ApplicationController
+  before_action :set_article, only: [:show]
 
   def index
     @articles = Article.all
   end
 
-  private
-
-  # Never trust parameters from the scary internet, only allow the white list through.
-  def proposal_params
-    params.require(:proposal).permit(:title, :description)
+  def show
   end
+
+  private
+    def set_article
+      @article = Article.find(params[:id])
+    end
+
 end
