@@ -3,7 +3,7 @@ class StudentJob.Models.AdminArticle extends Backbone.Model
   initialize: (id) ->
     @id ||= id
 
-  url: ->
+  urlRoot: ->
     '/admin/articles'
 
   save: (key, val, options) ->

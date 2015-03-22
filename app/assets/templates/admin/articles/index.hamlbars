@@ -32,7 +32,7 @@
                   %span.glyphicon.glyphicon-info-sign
                 %a.btn.btn-xs
                   %span.glyphicon.glyphicon-pencil
-                %a.btn.btn-xs
+                %a.btn.btn-xs{ href: "#admin/articles/#{ hb 'id' }/destroy"}
                   %span.glyphicon.glyphicon-remove
   .row
     .col-md-12

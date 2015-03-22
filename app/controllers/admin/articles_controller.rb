@@ -16,6 +16,11 @@ class Admin::ArticlesController < AdminController
     end
   end
 
+  def destroy
+    @article.destroy
+    render nothing: true
+  end
+
   private
 
   def article_params
