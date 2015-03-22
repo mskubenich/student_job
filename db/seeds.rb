@@ -31,9 +31,9 @@ Article.create title: 'Студенти УжНУ почали користува
 Article.create title: 'Студенти УжНУ почали користуватися нашим сайтом3.', body: 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum '
 Article.create title: 'Студенти УжНУ почали користуватися нашим сайтом4.', body: 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum '
 Article.create title: 'Студенти УжНУ почали користуватися нашим сайтом5.', body: 'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum '
-
-
-Vacantion.create title: 'Title Vacantion 1', description: 'Test descriprion 1 '
-Vacantion.create title: 'Title Vacantion 2', description: 'Test descriprion 2 '
-Vacantion.create title: 'Title Vacantion 3', description: 'Test descriprion 3 '
+#
+# puts 'Create Vacantions...'
+# Vacantion.create title: 'Title Vacantion 1', description: 'Test descriprion 1 '
+# Vacantion.create title: 'Title Vacantion 2', description: 'Test descriprion 2 '
+# Vacantion.create title: 'Title Vacantion 3', description: 'Test descriprion 3 '
 

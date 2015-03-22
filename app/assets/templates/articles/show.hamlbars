@@ -1,0 +1,11 @@
+.container
+  .row
+    .col-md-10.text-center.lilac-block
+      %table.table
+        %tbody
+          %tr
+            %td
+              %h4.sj-header.position_center
+                = hb 'title'
+              %p.full_article
+                = hb 'body'

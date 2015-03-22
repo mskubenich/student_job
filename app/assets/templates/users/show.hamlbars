@@ -1,29 +1,30 @@
--#= hb 'user'
-
 .container
   .row
-    .col-md-6.col-md-offset-3.text-center
-      = hb 'if user' do
-        %h1 User #{( hb 'user.email')} Information
+    .col-md-5.col-md-offset-7.text-center.lilac-block
+      .text-center
+        = hb 'if user' do
+          %h1.sj-header
+            User Information
 
-  .row
-    .col-md-12
-      %table
-        %tr
-          %th First Name
-          %td #{( hb 'user.first_name')}
-        %tr
-          %th Last Name
-          %td #{( hb 'user.last_name')}
-        %tr
-          %th Email
-          %td #{( hb 'user.email')}
-        %tr
-          %th Date Of Birth
-          %td #{( hb 'user.date_of_birth')}
-        %tr
-          %th Country
-          %td #{( hb 'user.country')}
-        %tr
-          %th Region
-          %td #{( hb 'user.region')}
+          %table
+            %tr
+              %th.sj-header First Name
+              %td.sj-header #{( hb 'user.first_name')}
+            %tr
+              %th.sj-header Last Name
+              %td.sj-header #{( hb 'user.last_name')}
+            %tr
+              %th.sj-header Email
+              %td.sj-header #{( hb 'user.email')}
+            %tr
+              %th.sj-header Date Of Birth
+              %td.sj-header #{( hb 'user.date_of_birth')}
+            -#%tr
+            -#  %th.sj-header Country
+            -#  %td.sj-header #{( hb 'user.country')}
+            -#%tr
+            -#  %th.sj-header Region
+            -#  %td.sj-header #{( hb 'user.region')}
+          %br
+        .text-center
+          %input{ type: 'submit', class: "btn btn-primary btn-lg"}
