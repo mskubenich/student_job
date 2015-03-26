@@ -97,6 +97,10 @@ body{
   font-family: 'Indie Flower' !important;
 }
 
+.sj-text{
+  color: white;
+  font-family: 'Indie Flower' !important;
+}
 .position_center{
   margin-left: auto;
   margin-right: auto;
@@ -205,3 +209,32 @@ body{
   color: red;
   padding-left: 15px;
 }
+
+// for table
+.container {
+  display: table;
+  width: 100%;
+}
+
+.row {
+  display: table-row;
+  width: 100%;
+}
+
+.column {
+  display: table-cell;
+}
+
+.column_75 {
+  display: table-cell;
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.column_10 {
+  display: table-cell;
+  width: 15%;
+  padding-left: 15px;
+}
+

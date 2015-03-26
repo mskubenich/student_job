@@ -14,7 +14,7 @@ class StudentJob.Routers.Vacantions extends StudentJob.Routers.Application
     @vacantionsIndexView.render()
 
   show: (id) ->
-    @vacantions = new StudentJob.Models.Vacantion(id)
+    @vacantion = new StudentJob.Models.Vacantion(id)
 
     @vacantionsShowView = new StudentJob.Views.VacantionsShow
       vacantion: @vacantion

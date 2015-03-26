@@ -60,6 +60,6 @@ class ProposalsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def proposal_params
-      params.require(:proposal).permit(:title, :description)
+      params.require(:proposal).permit(:title, :description, :salary, :currency)
     end
 end

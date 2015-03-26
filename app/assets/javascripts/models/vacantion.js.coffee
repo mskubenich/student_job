@@ -7,6 +7,9 @@ class StudentJob.Models.Vacantion extends Backbone.Model
     id: null
     title: null
     description: null
+    salary: null
+    currency: null
+
 
   url: ->
     '/vacantions/' + @id + '.json?'

@@ -1,27 +1,15 @@
-%table.table.table-striped
-  %tbody
-    %tr
-      %td
-        Id
-      %td
-        = hb 'id'
-    %tr
-      %td
-        Title
-      %td
-        = hb 'title'
-    %tr
-      %td
-        Description
-      %td
-        = hb 'description'
-    %tr
-      %td
-        Created At
-      %td
-        = hb 'created_at'
-    %tr
-      %td
-        Updated At
-      %td
-        = hb 'updated_at'
+.container
+  .row
+    .col-md-9.text-center.lilac-block
+      .text-center
+        %div.container
+          %div.row
+            %div.column
+              %h1.sj-header
+                = hb 'title'
+            %div.column.sj-text
+              = hb 'salary'
+              = hb 'currency'
+          %div.row
+            %div.column.sj-text
+              = hb 'description'

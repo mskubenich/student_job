@@ -1,29 +1,23 @@
-%a.btn.btn-info{ href: '#proposals/new' }
-  Add new
-
-%table.table.table-striped
-  %thead
-    %tr
-      %th
-        Id
-      %th
-        Title
-      %th
-        Actions
-  %tbody
-    = hb 'each proposals' do
-      %tr
-        %td
-          = hb 'id'
-        %td
-          = hb 'title'
-        %td
-          %a.btn.btn-xs{ href: "#proposals/#{ hb 'id' }"}
-            %span.glyphicon.glyphicon-info-sign
-          %a.btn.btn-xs
-            %span.glyphicon.glyphicon-pencil
-          %a.btn.btn-xs
-            %span.glyphicon.glyphicon-remove
-
-%a.btn.btn-info{ href: '#proposals/new' }
-  Add new
+.container
+  .row
+    .col-md-11.text-center.lilac-block
+      %table.table
+        %tbody
+          = hb 'each proposals' do
+            %tr
+              %td
+                %div.container
+                  %div.row
+                    %div.column
+                      %a{ href: "#proposals/#{ hb 'id' }"}
+                        %h1.sj-header
+                          = hb 'title'
+                    %div.column.sj-text
+                      = hb 'salary'
+                      = hb 'currency'
+                  %div.row
+                    %div.column
+                      %p.trancate_text_article
+                        = hb 'description'
+                    %div.column.sj-text
+                      = hb 'created_at'

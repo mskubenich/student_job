@@ -9,8 +9,8 @@
     %a{ href: '#admin/proposals' }
       Proposals
   %li
-    %a{ href: '#admin/cv' }
-      CV
+    %a{ href: '#admin/#vacantions' }
+      Vacantions
   = hb 'else'
   %li.active
     %a{ href: '#articles' }
@@ -19,5 +19,5 @@
     %a{ href: '#proposals' }
       Proposals
   %li
-    %a{ href: '#cv' }
-      CV
+    %a{ href: '#vacantions' }
+      Vacantions

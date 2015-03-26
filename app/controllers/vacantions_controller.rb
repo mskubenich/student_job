@@ -1,5 +1,5 @@
 class VacantionsController < ApplicationController
-  before_action :set_vacantions, only: [:show, :edit, :update, :destroy]
+  before_action :set_vacantion, only: [:show, :edit, :update, :destroy]
 
   def index
     @vacantions = Vacantion.all
@@ -47,19 +47,19 @@ class VacantionsController < ApplicationController
   def destroy
     @vacantion.destroy
     respond_to do |format|
-      format.html { redirect_to vacantions_url, notice: 'Vacantoin was successfully destroyed.' }
+      format.html { redirect_to vacantions_path, notice: 'Vacantion was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_vacantions
+    def set_vacantion
       @vacantion = Vacantion.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vacantion_params
-      params.require(:vacantion).permit(:title, :description)
+      params.require(:vacantion).permit(:title, :description, :salary, :currency)
     end
 end

@@ -22,7 +22,7 @@
         %td
           = hb 'updated_at'
         %td
-          %a.btn.btn-xs{ href: "#articles/#{ hb 'id' }"}
+          %a.btn.btn-xs{ href: "#admin/articles/#{ hb 'id' }"}
             %span.glyphicon.glyphicon-info-sign
           %a.btn.btn-xs
             %span.glyphicon.glyphicon-pencil

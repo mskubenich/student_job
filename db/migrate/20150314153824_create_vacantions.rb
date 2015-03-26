@@ -1,6 +1,6 @@
-class CreateProposals < ActiveRecord::Migration
+class CreateVacantions < ActiveRecord::Migration
   def change
-    create_table :proposals do |t|
+    create_table :vacantions do |t|
       t.string :title
       t.text :description
       t.integer :salary
